@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 const { DBSTR } = require('./index');
 
+const connStr = process.env.MONGODB_URI || DBSTR
 module.exports = (app) => {
     return new Promise((resolve, reject) => {
-        mongoose.connect(DBSTR, {
+        mongoose.connect(connStr, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });

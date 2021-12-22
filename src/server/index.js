@@ -6,7 +6,7 @@ const expressCfg = require('./config/express');
 const routesCfg = require('./config/routes');
 start();
 
-
+const listenPort = process.env.PORT || PORT
 async function start() {
     const app = express();
 
@@ -20,7 +20,11 @@ async function start() {
         })
     })
 
-    app.listen(PORT, () => {
-        console.log(`Listening on port http://localhost:${PORT}...`);
+    // if(process.env.NODE_ENV === 'production'){
+    //     app.use(express.static('client/build'))
+    // }
+
+    app.listen(listenPort, () => {
+        console.log(`Listening on port http://localhost:${listenPort}...`);
     });
 }

@@ -1,4 +1,6 @@
-const API_URL = 'http://localhost:9999/api/v1';
+const PORT = process.env.PORT || 9999
+
+const API_URL = `http://localhost:${PORT}/api/v1`;
 
 module.exports = {
     API_URL
