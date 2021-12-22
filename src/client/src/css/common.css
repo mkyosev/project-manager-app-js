@@ -1,0 +1,12 @@
+.maximum-img-size-projects {
+    max-height: 200px;
+}
+
+.card-img-top-top {
+    height: 13em;
+}
+
+.description-image {
+    max-height: 650px;
+    width: auto;
+}
